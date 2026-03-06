@@ -13,7 +13,7 @@ st.title("House Price Prediction App")
 
 with st.sidebar:
     st.title('house price prediction')
-    st.image('F:\QSP\ML_QSP\project\house_price_pred\houseimage.jpg', width=300)
+    st.image('houseimage.jpg', width=300)
 
 def encoded_loc(location):
     for loc,encoded in zip(df['location'], df['encoded_location']):
@@ -42,3 +42,4 @@ if c2.button("Predict Price"):
         pred=model.predict(inp_data)
         pred=float(f'{pred[0]:.2f}')
         st.success(f"The predicted price of the house is: ₹{pred*100000}")
+
